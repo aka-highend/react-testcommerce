@@ -1,3 +1,5 @@
+# Overview
+
 A simple representation of how online marketplace works. Built mainly using React, Redux, Firebase for auth, and Stripe for payment.
 
 ## Main Technologies
