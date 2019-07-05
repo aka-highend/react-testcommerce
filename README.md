@@ -15,7 +15,7 @@ A simple representation of how online marketplace works. Built mainly using Reac
 
 ### Installing
 
-To run it:
+To install:
 
 ```
 npm install
@@ -33,7 +33,7 @@ Or, you can use yarn. To install it:
 yarn
 ```
 
-Then start it using:
+Then run it using:
 
 ```
 yarn start
