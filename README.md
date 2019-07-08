@@ -15,19 +15,7 @@ A simple representation of how online marketplace works. Built mainly using Reac
 
 ### Installing
 
-To install:
-
-```
-npm install
-```
-
-Then start it using 
-
-```
-npm start
-```
-It will load the http://localhost:3000/
-Or, you can use yarn. To install it:
+You can use yarn to install:
 
 ```
 yarn
@@ -38,4 +26,5 @@ Then run it using:
 ```
 yarn start
 ```
+Then it will load the http://localhost:3000/
 
