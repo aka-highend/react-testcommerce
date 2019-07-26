@@ -32,7 +32,7 @@ class App extends React.Component {
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data()
-          })
+          });
           console.log(this.state);
         });
       }
