@@ -1,18 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
-import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
 
-import WithSpinner from '../../components/with-spinner/WithSpinner.component';
-
-import CollectionsOverview from '../../components/collections-overview/CollectionsOverview.component';
-import CollectionPage from '../collection/CollectionPage.component';
-
-const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
-const CollectionPageWithSpinner = WithSpinner(CollectionPage);
+import CollectionsOverviewContainer from '../../components/collections-overview/CollectionsOverview.container';
+import CollectionPageContainer from '../collection/Collection.container';
 
 class ShopPage extends React.Component {
   componentDidMount() {
@@ -21,32 +14,24 @@ class ShopPage extends React.Component {
   }
   
   render() {
-    const { match, isCollectionFetching } = this.props;
+    const { match } = this.props;
     return (
       <div className='shop-page'>
         <Route 
           exact path={`${match.path}`} 
-          render={props => (
-            <CollectionsOverviewWithSpinner isLoading={isCollectionFetching} {...props} />
-          )} 
+          component={CollectionsOverviewContainer}
         />
         <Route 
           path={`${match.path}/:collectionId`} 
-          render={props => (
-            <CollectionPageWithSpinner isLoading={isCollectionFetching} {...props} />
-          )}
+          component={CollectionPageContainer}
         />
       </div>
     );
   }
 }
 
-const mapStateToProps = createStructuredSelector({
-  isCollectionFetching: selectIsCollectionFetching
-});
-
 const mapDispacthToProps = dispatch => ({
   fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStartAsync())
 });
 
-export default connect(mapStateToProps, mapDispacthToProps)(ShopPage);
+export default connect(null, mapDispacthToProps)(ShopPage);
