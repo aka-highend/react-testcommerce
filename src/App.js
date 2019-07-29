@@ -3,14 +3,13 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './App.css';
-
 import AccountPage from '../src/pages/account/AccountPage.component';
 import HomePage from '../src/pages/homepage/HomePage.component';
 import ShopPage from '../src/pages/shop/ShopPage.component';
 import CheckoutPage from '../src/pages/checkout/CheckoutPage.component';
-
 import Header from '../src/components/header/Header.component';
+
+import { GlobalStyle } from '../src/Global.styles';
 
 import { auth, createUserProfileDocument } from '../src/firebase/firebase.utils';
 
@@ -48,6 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle/>
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage}/>
