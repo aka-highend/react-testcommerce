@@ -8,6 +8,7 @@ import '../collection-item/collection-item.styles.scss';
 
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
+
   return (
     <div className='collection-item'>
       <div
@@ -24,7 +25,8 @@ const CollectionItem = ({ item, addItem }) => {
         Add to cart
       </CustomButton>
     </div>
-)};
+  );
+};
 
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
