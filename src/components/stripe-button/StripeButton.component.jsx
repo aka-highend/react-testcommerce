@@ -16,7 +16,7 @@ const StripeCheckoutButton = ({ price }) => {
       name='React Commerce'
       billingAddress
       shippingAddress
-      image='https://svgshare.com/i/Duj.svg'
+      image='https://image.flaticon.com/icons/svg/2/2772.svg'
       description={`Your total is Rp${price}`}
       amount={priceForStripe}
       panelLabel='Pay Now'
