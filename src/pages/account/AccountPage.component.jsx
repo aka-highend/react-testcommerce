@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import SignIn from '../../components/sign-in/SignIn.component';
-import SignUp from '../../components/sign-up/SignUp.component';
+import SignIn from "../../components/sign-in/SignIn.component";
+import SignUp from "../../components/sign-up/SignUp.component";
 
-import { SignInAndSignUpContainer } from '../account/AccountPage.styles';
+import { SignInAndSignUpContainer } from "../account/AccountPage.styles";
 
 const AccountPage = () => (
   <SignInAndSignUpContainer>
-    <SignIn/>
-    <SignUp/>
+    <SignIn />
+    <SignUp />
   </SignInAndSignUpContainer>
 );
 
